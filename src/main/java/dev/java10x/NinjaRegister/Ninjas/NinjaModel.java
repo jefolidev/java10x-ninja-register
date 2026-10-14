@@ -1,9 +1,11 @@
-package dev.java10x.NinjaRegister;
+package dev.java10x.NinjaRegister.Ninjas;
 
+import dev.java10x.NinjaRegister.Missions.MissionsModel;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -12,6 +14,7 @@ public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Getter
     private UUID id;
 
     @Setter
@@ -26,9 +29,9 @@ public class NinjaModel {
     @Getter
     private int age;
 
-    public NinjaModel() {
-
-    }
+    @Setter
+    @Getter
+    private List<MissionsModel> missions;
 
     public NinjaModel(String name, String email, int age) {
         this.name = name;
