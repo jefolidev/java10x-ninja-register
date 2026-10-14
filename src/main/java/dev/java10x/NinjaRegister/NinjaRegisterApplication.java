@@ -9,5 +9,4 @@ public class NinjaRegisterApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NinjaRegisterApplication.class, args);
 	}
-
 }
