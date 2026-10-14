@@ -12,19 +12,19 @@ public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    UUID id;
+    private UUID id;
 
     @Setter
     @Getter
-    String name;
+    private String name;
 
     @Setter
     @Getter
-    String email;
+    private String email;
 
     @Setter
     @Getter
-    int age;
+    private int age;
 
     public NinjaModel() {
 
