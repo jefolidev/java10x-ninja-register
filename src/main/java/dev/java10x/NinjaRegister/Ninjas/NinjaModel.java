@@ -23,7 +23,7 @@ public class NinjaModel {
 
     @Setter
     @Getter
-    private String email;
+    private String email; 
 
     @Setter
     @Getter
@@ -31,7 +31,9 @@ public class NinjaModel {
 
     @Setter
     @Getter
-    private List<MissionsModel> missions;
+    @ManyToOne
+    @JoinColumn(name = "missions_id") // Foreing Key
+    private MissionsModel currentMission;
 
     public NinjaModel(String name, String email, int age) {
         this.name = name;
