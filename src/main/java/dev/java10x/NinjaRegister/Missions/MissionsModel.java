@@ -4,13 +4,17 @@ import dev.java10x.NinjaRegister.Missions.Utils.Dificulty;
 import dev.java10x.NinjaRegister.Missions.Utils.Status;
 import dev.java10x.NinjaRegister.Ninjas.NinjaModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @Table(name = "missions")
+@NoArgsConstructor
+@AllArgsConstructor
 public class MissionsModel {
     @Getter
     @Id

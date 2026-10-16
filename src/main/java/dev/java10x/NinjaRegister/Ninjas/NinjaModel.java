@@ -2,14 +2,19 @@ package dev.java10x.NinjaRegister.Ninjas;
 
 import dev.java10x.NinjaRegister.Missions.MissionsModel;
 import jakarta.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.UUID;
 
 @Entity
 @Table(name = "ninja_user")
+@NoArgsConstructor
+@AllArgsConstructor
 public class NinjaModel {
 
     @Id
@@ -23,6 +28,7 @@ public class NinjaModel {
 
     @Setter
     @Getter
+    @Column(unique = true)
     private String email; 
 
     @Setter
